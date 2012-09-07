@@ -5,6 +5,17 @@
 	require_once $config["path_to_twigview"];
 	require_once $_SERVER["DOCUMENT_ROOT"] . "/global_functions.php";
 	
+	if(in_array($_SERVER["HTTP_HOST"],$config["development_hosts"])){
+		error_reporting(E_ALL);
+    	ini_set('display_errors', 'On');
+		define("ENV_TYPE","dev");
+		$config["db_connection"] = $config["db_connection_dev"];
+	}else{
+		$config["db_connection"] = $config["db_connection_prod"];
+		define("ENV_TYPE","prod");
+	}
+	
+	
 	$current_module_location = dirname($_SERVER["DOCUMENT_ROOT"].$_SERVER["PHP_SELF"]);
 	if($current_module_location == $_SERVER["DOCUMENT_ROOT"]){ //root level
 		$current_module_location = $config["path_to_default_site_module"];

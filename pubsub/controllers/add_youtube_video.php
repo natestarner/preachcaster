@@ -20,9 +20,31 @@ function add_youtube_video(){
 	$video = new Video($db_resource);
 	
 	foreach ($videoFeed as $videoEntry) {
+		dump($videoEntry);
 		$pdo_params = array(
 			
 		);
+		//getVideoId()
+		//getVideoRecorded() date the video was recorded
+		//getWhere() geo
+		//getVideoWatchPageUrl() url to you tube video
+		//getVideoDuration()
+		//isVideoPrivate()
+		//getVideoTags()
+		//getVideoViewCount()
+		//getVideoGeoLocation()
+		//getVideoRatingInfo()
+		//getVideoCategory()
+		//getVideoDeveloperTags()
+		//getVideoState()
+		//getVideoCommentFeedUrl()
+		//getRecorded() date that the video was recorded
+		//getLocation() Gets the location where the video was recorded
+		//getNoEmbed() If the return value is an instance of Zend_Gdata_YouTube_Extension_NoEmbed, this video cannot be embedded.
+		//getStatistics()
+		//getRacy()
+		//getRating()
+		
 	    echo "---------VIDEO----------\n";
 	    echo "Title: " . $videoEntry->getVideoTitle() . "\n";
 	    echo "\nDescription:\n";

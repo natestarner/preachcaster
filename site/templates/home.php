@@ -5,6 +5,7 @@
         <h1>Hello, world!</h1>
         <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
         <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+        <p>To build your own profile: <a class="btn" href="https://accounts.google.com/o/oauth2/auth?client_id={{ youtube_client_id }}&redirect_uri={{ youtube_oauth_callback }}&scope=https://gdata.youtube.com&response_type=code&access_type=offline&approval_prompt=force">Sign in with <img src="/site/images/youtube_logo.png" />&nbsp;&nbsp;&raquo;</a></p>
       </div>
 
       <!-- Example row of columns -->
